@@ -8,9 +8,6 @@ const forecast = (latitude, longitude, callback) => {
     latitude +
     "," +
     longitude;
-
-    console.log(url);
-
   request({ url, json: true }, (error, { body }) => {
     if (error) {
       callback("Unable to connect to weather service!", undefined);
@@ -20,11 +17,11 @@ const forecast = (latitude, longitude, callback) => {
       callback(
         undefined,
         body.current.weather_descriptions[0] +
-        " it is currently " +
-        body.current.temperature +
-        " degress out. it feels like " +
-        body.current.feelslike +
-        " degress out"
+          " it is currently " +
+          body.current.temperature +
+          " degress out. it feels like " +
+          body.current.feelslike +
+          " degress out"
       );
     }
   });
