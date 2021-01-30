@@ -21,7 +21,9 @@ const forecast = (latitude, longitude, callback) => {
           body.current.temperature +
           " degress out. it feels like " +
           body.current.feelslike +
-          " degress out"
+          " degress out " +
+          body.current.humidity +
+          " humidity"
       );
     }
   });
